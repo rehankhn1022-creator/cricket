@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first website</title>
+
+    <style>
+</head>
+<body>
+    {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        <h1>{
+            color: darkblue;
+        }</h1>
+
+        <button> {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+              
+    
+    
+    </button>
+
+    </style>
+
+
+
+<body>
+     <h1>Welcome to My Website</h1>
+    <p>Hello! My name is Rehan.</p>
+    <p>This is my first website.</p>
+
+</body>
+  
+
+  
+    <button>Click Me</button>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Cricket Explorer</title>
+<style>
+:root{--bg:#07111f;--panel:#101f32;--panel2:#142840;--text:#f4f8ff;--muted:#a9bad0;--green:#43e0a0;--line:#263b54}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#163a50 0,#07111f 48%);color:var(--text);font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+header{padding:30px 6% 24px;border-bottom:1px solid var(--line)}.brand{color:var(--green);font-weight:800;letter-spacing:2px;font-size:12px}.hero{max-width:1000px;margin:auto}h1{font-size:clamp(30px,5vw,48px);margin:12px 0}.subtitle{color:var(--muted);line-height:1.6}
+.searchrow{display:flex;gap:10px;margin-top:22px;max-width:760px}input{flex:1;min-width:0;background:#0c1b2c;color:white;border:1px solid #38516d;border-radius:12px;padding:15px;font-size:16px;outline:none}input:focus{border-color:var(--green)}button{border:0;border-radius:12px;background:var(--green);color:#052116;font-weight:800;padding:0 22px;cursor:pointer;font-size:15px}button:hover{filter:brightness(1.06)}
+main{max-width:1100px;margin:28px auto;padding:0 20px 50px}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.sectionhead h2{font-size:20px}.hint{font-size:13px;color:var(--muted)}.players{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:13px}.player{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:15px;padding:17px;cursor:pointer;transition:.18s;text-align:left;color:var(--text)}.player:hover{transform:translateY(-3px);border-color:var(--green)}.avatar{height:64px;width:64px;border-radius:50%;background:#203d55;display:grid;place-items:center;font-size:28px;margin-bottom:13px}.player strong{display:block;font-size:15px}.player small{color:var(--muted);display:block;margin-top:6px}
+#status{color:var(--muted);padding:18px 0}.detail{display:none;background:var(--panel);border:1px solid var(--line);border-radius:18px;margin-top:25px;overflow:hidden}.detailtop{display:grid;grid-template-columns:180px 1fr;gap:22px;padding:24px;background:linear-gradient(110deg,#15344a,#101f32)}.portrait{width:100%;height:190px;object-fit:cover;border-radius:12px;background:#203d55}.detail h2{margin:0 0 8px;font-size:28px}.bio{color:#d2deeb;line-height:1.65}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.tag{font-size:12px;background:#203b51;border:1px solid #35536c;padding:6px 9px;border-radius:20px}.detailbody{padding:22px}.detailbody h3{margin-top:0}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.fact{padding:13px;background:#0c1a2a;border:1px solid var(--line);border-radius:10px}.fact label{font-size:11px;color:var(--muted);display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.6px}.fact strong{font-size:14px;overflow-wrap:anywhere}.notice{color:var(--muted);font-size:12px;line-height:1.5;margin-top:18px}.footer{text-align:center;color:#7890a9;font-size:12px;padding:20px}.close{background:transparent;color:var(--green);border:1px solid #35536c;padding:9px 12px;margin-top:12px}
+@media(max-width:560px){.detailtop{grid-template-columns:1fr}.portrait{height:220px;max-width:220px}.searchrow{flex-direction:column}.searchrow button{padding:14px}}
+</style>
+</head>
+<body>
+<header><div class="hero">
+<div class="brand">PERSONAL CRICKET DATABASE</div>
+<h1>Cricket Explorer 🏏</h1>
+<div class="subtitle">Search a cricketer and explore their biography, career information, and available profile details. This website runs from a file on your own device.</div>
+<div class="searchrow"><input id="search" type="search" placeholder="Type a cricketer's name, e.g. Virat Kohli" autocomplete="off"><button id="searchBtn">Search player</button></div>
+</div></header>
+<main>
+<div class="sectionhead"><h2>Popular cricketers</h2><span class="hint">Click any player to open their profile</span></div>
+<div class="players" id="players"></div>
+<div id="status" role="status">Choose a player above or search for any cricketer. Internet is needed for live profile lookups.</div>
+<section class="detail" id="detail">
+<div class="detailtop"><img class="portrait" id="portrait" alt="Cricketer portrait" hidden><div id="portraitFallback" class="portrait" style="display:grid;place-items:center;font-size:60px">🏏</div><div><h2 id="name"></h2><div class="bio" id="summary"></div><div class="tags" id="tags"></div><button class="close" id="closeBtn">Close profile</button></div></div>
+<div class="detailbody"><h3>Profile details</h3><div class="facts" id="facts"></div><p class="notice">Profile descriptions are retrieved from Wikipedia when available. This page does not guarantee live or official match statistics. For current scores and verified career stats, check an official cricket source.</p></div>
+</section>
+</main>
+<div class="footer">Personal-use page • Your searches are not saved by this website.</div>
+<script>
+const popular=[
+{name:"Virat Kohli",role:"India • Batter",emoji:"🏏"},
+{name:"Rohit Sharma",role:"India • Batter",emoji:"🇮🇳"},
+{name:"MS Dhoni",role:"India • Wicketkeeper",emoji:"🧤"},
+{name:"Sachin Tendulkar",role:"India • Batter",emoji:"⭐"},
+{name:"Jasprit Bumrah",role:"India • Bowler",emoji:"🎯"},
+{name:"Hardik Pandya",role:"India • All-rounder",emoji:"🔥"},
+{name:"Shubman Gill",role:"India • Batter",emoji:"🏏"},
+{name:"Babar Azam",role:"Pakistan • Batter",emoji:"🏏"},
+{name:"Kane Williamson",role:"New Zealand • Batter",emoji:"🏏"},
+{name:"Ben Stokes",role:"England • All-rounder",emoji:"🏏"},
+{name:"AB de Villiers",role:"South Africa • Batter",emoji:"⚡"},
+{name:"Chris Gayle",role:"West Indies • Batter",emoji:"💥"}
+];
+const $=id=>document.getElementById(id);
+const players=$("players");
+popular.forEach(p=>{const b=document.createElement("button");b.className="player";b.innerHTML=`<div class="avatar">${p.emoji}</div><strong>${p.name}</strong><small>${p.role}</small>`;b.addEventListener("click",()=>lookup(p.name));players.appendChild(b)});
+$("searchBtn").addEventListener("click",()=>lookup($("search").value));
+$("search").addEventListener("keydown",e=>{if(e.key==="Enter")lookup($("search").value)});
+$("closeBtn").addEventListener("click",()=>{$("detail").style.display="none";$("status").textContent="Choose another player or search for a cricketer."});
+function showStatus(t){$("status").style.display="block";$("status").textContent=t}
+function setFact(label,value){if(!value)return;const d=document.createElement("div");d.className="fact";const l=document.createElement("label");l.textContent=label;const v=document.createElement("strong");v.textContent=value;d.append(l,v);$("facts").appendChild(d)}
+async function lookup(raw){
+ const q=raw.trim();if(!q){showStatus("Please type a cricketer's name first.");return}
+ $("detail").style.display="none";showStatus("Searching for "+q+"…");
+ try{
+  const url="https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch="+encodeURIComponent(q+" cricketer")+"&gsrnamespace=0&gsrlimit=8&prop=pageimages|extracts|info&exintro=1&explaintext=1&exchars=1800&inprop=url&pithumbsize=500&format=json&origin=*";
+  const res=await fetch(url);if(!res.ok)throw new Error("lookup failed");const data=await res.json();
+  const pages=Object.values(data.query?.pages||{});if(!pages.length){showStatus("No profile found. Try a different spelling or full name.");return}
+  let page=pages.find(x=>x.title.toLowerCase()===q.toLowerCase())||pages.find(x=>/cricketer|cricket player|cricket/i.test(x.extract||""))||pages[0];
+  $("name").textContent=page.title;$("summary").textContent=page.extract||"No short biography is available for this page.";
+  const img=$("portrait"),fallback=$("portraitFallback");if(page.thumbnail?.source){img.src=page.thumbnail.source;img.hidden=false;fallback.style.display="none"}else{img.hidden=true;fallback.style.display="grid"}
+  $("tags").innerHTML="";["Wikipedia profile","Biography"].forEach(t=>{const s=document.createElement("span");s.className="tag";s.textContent=t;$("tags").appendChild(s)});
+  $("facts").innerHTML="";setFact("Full name",page.title);setFact("Profile source","Wikipedia");setFact("Page URL",page.fullurl||"Not available");
+  const text=page.extract||"";
+  const born=text.match(/born\s+([^,.;]+)/i);if(born)setFact("Born",born[1].trim());
+  const teams=[...text.matchAll(/\b(India|Pakistan|Australia|England|New Zealand|South Africa|Sri Lanka|Bangladesh|Afghanistan|West Indies)\b/g)].map(m=>m[1]);if(teams.length)setFact("Country mentioned",[...new Set(teams)].slice(0,4).join(", "));
+  if(page.fullurl){const link=document.createElement("a");link.href=page.fullurl;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Open full Wikipedia article ↗";link.style.color="#43e0a0";link.style.display="inline-block";link.style.marginTop="16px";$("facts").appendChild(link)}
+  $("detail").style.display="block";$("status").style.display="none";$("detail").scrollIntoView({behavior:"smooth",block:"start"});
+ }catch(e){showStatus("Could not load the profile. Please check your internet connection and try again.")}
+}
+</script>
+</body>
+</html>
+</a>
+    
+</body>
+</html>
